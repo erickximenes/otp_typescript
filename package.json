@@ -1,0 +1,32 @@
+{
+  "name": "totp_nodejs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "ts-node-dev --respawn --transpile-only --exit-child server.ts",
+    "db:migrate": "npx prisma migrate dev --name user-entity --create-only && npx prisma generate",
+    "db:push": "npx prisma db push",
+    "db:studio": "npx prisma studio"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/cors": "^2.8.13",
+    "@types/express": "^4.17.17",
+    "@types/morgan": "^1.9.4",
+    "@types/node": "^18.15.10",
+    "@types/speakeasy": "^2.0.7",
+    "morgan": "^1.10.0",
+    "prisma": "^4.11.0",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.0.2"
+  },
+  "dependencies": {
+    "@prisma/client": "^4.11.0",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "speakeasy": "^2.0.0"
+  }
+}
