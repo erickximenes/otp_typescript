@@ -9,6 +9,7 @@
 
 Antes de começar, verifique se você atendeu aos seguintes requisitos:
 * Ter o NodeJS instalado no seu computador
+* Extensão Rest Client para consumir a API no VS Code.
 
 ## 🚀 Configurando totp_nodejs
 

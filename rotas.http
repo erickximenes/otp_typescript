@@ -1,0 +1,59 @@
+### Register User
+
+POST http://localhost:8000/api/auth/register HTTP/1.1
+content-type: application/json
+
+{
+    "email": "erick@test.com",
+	"name": "Erick Vasconcelos",
+	"password": "1234"
+}
+
+### Login
+
+POST http://localhost:8000/api/auth/login HTTP/1.1
+content-type: application/json
+
+{
+    "email": "erick@test.com",
+	"password": "1234"
+}
+
+### Generate OTP
+
+POST http://localhost:8000/api/auth/otp/generate HTTP/1.1
+content-type: application/json
+
+{
+    "user_id": "0bd447b3-7c77-4783-9f60-ac6969e11090"
+}
+
+### Verify OTP
+
+POST http://localhost:8000/api/auth/otp/verify HTTP/1.1
+content-type: application/json
+
+{
+    "user_id": "0bd447b3-7c77-4783-9f60-ac6969e11090",
+	"token": "479230"
+}
+
+### Validate OTP
+
+POST http://localhost:8000/api/auth/otp/validate HTTP/1.1
+content-type: application/json
+
+{
+    "user_id": "0bd447b3-7c77-4783-9f60-ac6969e11090",
+	"token": "779834"
+}
+
+### Disable OTP
+
+POST http://localhost:8000/api/auth/otp/disable HTTP/1.1
+content-type: application/json
+
+{
+    "user_id": "0bd447b3-7c77-4783-9f60-ac6969e11090",
+	"token": "779834"
+}
