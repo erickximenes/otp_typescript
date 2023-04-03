@@ -1,18 +1,18 @@
 <div id="inicio"></div>
 <h1 align="center"> 
-	🚀  totp_nodejs 🚀
+	🚀  otp_typescript 🚀
 </h1>
 
-> Projeto serve para o usuário fazer autenticação de 2 fatores usando um app pra gerar uma chave de acesso única.
+> Serviço de autenticação de 2 fatores para gerar uma chave de acesso única utilizando criptografia OTP. O projeto é totalmente desenvolvido em TypeScript e utiliza um banco de dados sqlite juntamente com o orm Prisma.
 
 ## 💻 Pré-requisitos
 
 Antes de começar, verifique se você atendeu aos seguintes requisitos:
 
 * Ter o NodeJS instalado no seu computador.
-* Extensão REST Client para consumir a API no VS Code.
+* Ter a extensão REST Client ou o Insomnia para consumir a API.
 
-## 🚀 Configurando totp_nodejs
+## 🚀 Configurando otp_typescript
 
 Execute os seguintes comandos para gerar o DB sqlite para testar o projeto.
 
@@ -24,11 +24,11 @@ npm db:migrate
 npm db:push
 ```
 
-## ☕ Usando totp_nodejs
+## ☕ Usando otp_typescript
 
 Para iniciar o projeto execute o seguinte comando: `npm start`.
 
-Existe um arquivo com as rotas para testar o serviço no insomnia. O arquivo está na pasta raiz com o nome `rotas.json`. Mas você também pode testar as rotas usando o arquivo `rotas.http` e instalando a extensão `REST Client`.
+Existe um arquivo com as rotas para testar o serviço no `Insomnia`, o arquivo está na pasta raiz com o nome `rotas.json`. Mas você também pode testar as rotas usando o arquivo `rotas.http` e utilizando a extensão `REST Client`.
 
 Para adicionar a conta cadastrada no app do Google Autenticator, execute a rota Generate OTP e copie o campo `base32` que foi retornado e cole no app. Como nas imagens abaixo.
 
@@ -42,7 +42,7 @@ Para adicionar a conta cadastrada no app do Google Autenticator, execute a rota 
 
 Para validar o código você pode usar as rotas Validate OTP ou Verify OTP.
 
-Você também pode desabilitar o OTP/TOTP da conta criada.
+Você também pode desabilitar o OTP da conta criada.
 
 Você pode acessar a interface do prisma usando o comando `npm db:studio` e acessand a URL `http://localhost:5555/`.
 
